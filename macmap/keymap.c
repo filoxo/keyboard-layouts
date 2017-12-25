@@ -50,6 +50,10 @@ void matrix_init_user(void) {
 void matrix_scan_user(void) {
 }
 
+// Tap Dance Definitions
+// qk_tap_dance_action_t tap_dance_actions[] = {
+// };
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
