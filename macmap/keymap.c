@@ -11,6 +11,8 @@ enum gherkin_layers {
 #define BASE TO(_QWERTY)
 #define UPPR TO(_UPPERS)
 #define FNRW TO(_FNROW)
+#define SFT_LGUI SFT_T(KC_LGUI)
+#define CTL_SCP CTL_T(KC_SPC)
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -20,7 +22,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = KEYMAP(
     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_ENT,  
-    KC_Z,     KC_X,     KC_C,     KC_V,     KC_LGUI,  KC_SPC,   KC_B,     KC_N,     KC_M,     UPPR
+    KC_Z,     KC_X,     KC_C,     KC_V,     SFT_LGUI, CTL_SPC,  KC_B,     KC_N,     KC_M,     UPPR
   ),
   [_UPPERS] = KEYMAP(
     KC_ESC,   KC_GRV,   KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_1,     KC_2,     KC_3,     KC_BSPC,
