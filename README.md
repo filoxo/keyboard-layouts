@@ -11,4 +11,4 @@ My keymap for the Gherkin keyboard, optimized for use on a Mac computer
 
 ### Reference 
 
-Refer to the original [QMK Orthodox source](https://github.com/qmk/qmk_firmware/tree/master/keyboards/orthodox) for additional information.
+Refer to the original [QMK Gherkin source](https://github.com/qmk/qmk_firmware/tree/master/keyboards/gherkin) for additional information.
