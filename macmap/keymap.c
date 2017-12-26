@@ -1,18 +1,25 @@
 #include "gherkin.h"
 #include "action_layer.h"
 
-//Friendly Layer Names
+// Friendly layer names
 enum gherkin_layers {
   _QWERTY,
   _UPPERS,
   _FNROW
 };
 
+// Friendly tap dance action names
+enum {
+  TD_A_TAB = 0,
+  TD_Q_ESC = 1,
+  TD_P_BSP = 2
+};
+
 #define BASE TO(_QWERTY)
 #define UPPR TO(_UPPERS)
 #define FNRW TO(_FNROW)
-#define SFT_LGUI SFT_T(KC_LGUI)
-#define CTL_SCP CTL_T(KC_SPC)
+#define SFT_SPC SFT_T(KC_SPC)
+#define CMD_BSP LGUI(KC_BSPC)
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -20,9 +27,9 @@ enum gherkin_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = KEYMAP(
-    KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,
-    KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_ENT,  
-    KC_Z,     KC_X,     KC_C,     KC_V,     SFT_LGUI, CTL_SPC,  KC_B,     KC_N,     KC_M,     UPPR
+    TD(TD_Q_ESC),KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     TD(TD_P_BSP),
+    TD(TD_A_TAB),KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_ENT,
+    KC_Z,        KC_X,     KC_C,     KC_V,     CMD_BSP,  SFT_SPC,  KC_B,     KC_N,     KC_M,     UPPR
   ),
   [_UPPERS] = KEYMAP(
     KC_ESC,   KC_GRV,   KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_1,     KC_2,     KC_3,     KC_BSPC,
@@ -53,8 +60,11 @@ void matrix_scan_user(void) {
 }
 
 // Tap Dance Definitions
-// qk_tap_dance_action_t tap_dance_actions[] = {
-// };
+qk_tap_dance_action_t tap_dance_actions[] = {
+  [TD_A_TAB] = ACTION_TAP_DANCE_DOUBLE(KC_A, KC_TAB),
+  [TD_Q_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_ESC),
+  [TD_P_BSP] = ACTION_TAP_DANCE_DOUBLE(KC_P, KC_BSPC)
+};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
