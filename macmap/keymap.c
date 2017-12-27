@@ -18,8 +18,8 @@ enum {
 #define BASE TO(_QWERTY)
 #define UPPR TO(_UPPERS)
 #define FNRW TO(_FNROW)
-#define SFT_SPC SFT_T(KC_SPC)
-#define CMD_BSP LGUI(KC_BSPC)
+#define SPC_SFT SFT_T(KC_SPC)
+#define BSP_CMD GUI_T(KC_BSPC)
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -29,7 +29,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = KEYMAP(
     TD(TD_Q_ESC),KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     TD(TD_P_BSP),
     TD(TD_A_TAB),KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,     KC_ENT,
-    KC_Z,        KC_X,     KC_C,     KC_V,     CMD_BSP,  SFT_SPC,  KC_B,     KC_N,     KC_M,     UPPR
+    KC_Z,        KC_X,     KC_C,     KC_V,     BSP_CMD,  SPC_SFT,  KC_B,     KC_N,     KC_M,     UPPR
   ),
   [_UPPERS] = KEYMAP(
     KC_ESC,   KC_GRV,   KC_MINS,  KC_EQL,   KC_LBRC,  KC_RBRC,  KC_7,     KC_8,     KC_9,     KC_BSPC,
