@@ -22,6 +22,9 @@ enum {
 #define SPC_GUI GUI_T(KC_SPC)
 #define ENT_UPPR LT(UPPR, KC_ENT)
 #define BSL_FNRW LT(FNRW, KC_BSLS)
+#define BRT_DN KC_F14
+#define BRT_UP KC_F15
+#define MRWD_BASE LT(BASE, KC_MRWD)
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
@@ -39,9 +42,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LEFT,    KC_DOWN,   KC_RGHT,  XXXXXXX,  XXXXXXX,  KC_SCLN,  KC_QUOT,  KC_COMM,  KC_DOT,   KC_SLSH
   ),
   [_FNROW] = KEYMAP(
-    KC_F1,    KC_F2,    KC_F3,    KC_F4,    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_VOLD,  KC_VOLU,  KC_MUTE,
-    KC_F5,    KC_F6,    KC_F7,    KC_F8,    XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MFFD,  KC_MPLY,  KC_MRWD,
-    KC_F9,    KC_F10,   KC_F11,   KC_F12,   XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F14,   KC_F15,   BASE
+    KC_F1,    KC_F2,    KC_F3,    KC_F4,    KC_F5,    KC_F6,    KC_F7,    KC_F8,    KC_F9,    KC_F10,
+    KC_F11,   KC_F12,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MFFD,  KC_MPLY,  MRWD_BASE,
+    BRT_DN,   BRT_UP,   XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_VOLD,  KC_VOLU,  KC_MUTE
   ),
 };
 
