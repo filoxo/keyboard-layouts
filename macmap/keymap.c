@@ -46,9 +46,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
       TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  LCBR ,  RCBR ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,   UP  ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|-------   -------|-------|-------|-------|-------|-------|-------|
-      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS ,     TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS ,     TRNS ,  LEFT ,  DOWN , RIGHT ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
                                      TRNS  , TRNS  , DEL  ,     TRNS ,  TRNS ,  TRNS 
   //                               .-------|-------/-----/     \-----|-------|-------.
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
       TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-      TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS , TRNS  ,  TRNS ,  TRNS ,  TRNS ,  TRNS , 
+      TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS ,  TRNS  , TRNS ,  TRNS ,  TRNS ,  TRNS , 
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
                                       TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS , TRNS
   //                               .-------|-------/-----/     \-----|-------|-------.
