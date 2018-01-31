@@ -17,7 +17,7 @@ enum custom_keycodes {
 };
 
 #define KC_ KC_TRNS
-#define ____ KC_TRNS
+#define TRNS KC_TRNS
 
 #define KC_LOWR LOWER
 #define KC_RASE RAISE
@@ -34,23 +34,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
       TAB  ,   A   ,   S   ,   D   ,   F   ,   G   ,                     H   ,   J   ,   K   ,   L   ,  SCLN ,  QUOT ,
   //|------|-------|-------|-------|-------|-------|-------   -------|-------|-------|-------|-------|-------|-------|
-      LCTL ,   Z   ,   X   ,   C   ,   V   ,   B   ,  UP   ,    DOWN ,   N   ,   M   ,  COMM ,  DOT  ,  SLSH ,  ENT  ,
+      LCTL ,  LALT ,   Z   ,   X   ,   C   ,   V   ,  NO   ,     NO  ,   B   ,   N   ,   M   ,  COMM ,  DOT  ,  SLSH ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-                                     LOWR  , LGUI  , BSPC ,      SPC ,  LSFT ,  RASE
+                                     LOWR  , LGUI  , BSPC ,      SPC ,  ENT  ,  RASE
   //                               .-------|-------/-----/     \-----|-------|-------.
   ),
 
   [_LOWER] = KC_KEYMAP(
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-      TILD , EXLM  ,  AT   , HASH  ,  DLR  , PERC  ,                    CIRC ,  AMPR ,  ASTR ,  LPRN ,  RPRN ,  BSPC ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  MINS ,  EQL  ,  DEL  ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-       RST ,   1   ,   2   ,   3   ,   4   ,   5   ,                     6   ,   7   ,   8   ,   9   ,   0   ,       ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  LCBR ,  RCBR ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-       DEL ,       ,  LEFT , RGHT  ,  UP   , LBRC  ,                    RBRC ,   P4  ,   P5  ,   P6  ,  PLUS ,  PIPE ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|-------   -------|-------|-------|-------|-------|-------|-------|
-      BL_S ,       ,       ,       , DOWN  , LCBR  , LPRN ,     RPRN ,  RCBR ,   P1  ,   P2  ,   P3  ,  MINS ,       ,
+      TRNS , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS ,     TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-                                           ,       ,  DEL ,      DEL ,       ,   P0 
+                                     TRNS  , TRNS  , DEL  ,     TRNS ,  TRNS ,  TRNS 
   //                               .-------|-------/-----/     \-----|-------|-------.
   ),
 
@@ -58,34 +58,34 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
        F1  ,   F2  ,   F3  ,   F4  ,   F5  ,   F6  ,                    F7   ,  F8   ,  F9   ,  F10  ,  F11  ,  F12  ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-           ,       ,       ,  F14  ,  F15  ,       ,                    MPRV ,  MPLY ,  MNXT ,  MUTE ,  VOLD ,  VOLU ,
+      TRNS ,  TRNS ,  TRNS ,  F14  ,  F15  ,  TRNS ,                    MPRV ,  MPLY ,  MNXT ,  MUTE ,  VOLD ,  VOLU ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-           ,       ,       ,       ,  PGUP ,  UNDS ,                    EQL  , HOME  ,       ,       ,       , BSLS  ,
+      TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-           ,       ,       ,       ,  PGDN ,  MINS ,      ,          ,  PLUS , END   ,       ,       ,       ,       , 
+      TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS , TRNS  ,  TRNS ,  TRNS ,  TRNS ,  TRNS , 
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-                                           ,       ,      ,          ,       ,    
+                                      TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS , TRNS
   //                               .-------|-------/-----/     \-----|-------|-------.
   ),
 
   [_ADJUST] = KEYMAP(
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-      ____ ,  ____ ,  ____ ,  ____ ,  ____ ,  ____ ,                    ____ ,  ____ ,  ____ ,  ____ ,  ____ ,  ____ ,
+     TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-    RGB_TOG,RGB_MOD,RGB_HUI,RGB_SAI,RGB_VAI,  ____ ,                    ____ ,  ____ ,  ____ ,  ____ , ____ ,  ____ ,
+    RGB_TOG,RGB_MOD,RGB_HUI,RGB_SAI,RGB_VAI,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-     RESET , DEBUG ,RGB_HUD,RGB_SAD,RGB_VAD,  ____ ,                    ____ ,  ____ ,  ____ ,  ____ , ____ ,  ____ ,
+     RESET , DEBUG ,RGB_HUD,RGB_SAD,RGB_VAD,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-    BL_STEP,  ____ ,  ____ ,  ____ ,  ____ ,  ____ ,  ____ ,    ____ ,  ____ ,  ____ ,  ____ ,  ____ , ____ ,  ____ ,
+    BL_STEP, TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
-                                      ____ ,  ____ ,  ____ ,    ____ ,  ____ ,  ____
+                                      TRNS ,  TRNS , TRNS ,     TRNS ,  TRNS ,  TRNS
   //                               .-------|-------/-----/     \-----|-------|-------.
   )
 
 };
 
 #ifdef AUDIO_ENABLE
-float tone_qwerty[][2]     = SONG(QWERTY_SOUND);
+float tone_qwerty[][2] = SONG(QWERTY_SOUND);
 #endif
 
 void persistent_default_layer_set(uint16_t default_layer) {
