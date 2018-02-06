@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "description": "My QMK keyboard layouts go here. Npm is just for scripts.",
   "main": "index.js",
+  "qmkKeyboards": "../qmk_firmware/keyboards",
   "scripts": {
-
+    "cp:gherkin": "rm -rf $npm_package_qmkKeyboards/gherkin/keymaps/macmap && cp -R ./gherkin/macmap $npm_package_qmkKeyboards/gherkin/keymaps/macmap",
+    "cp:iris": "rm -rf $npm_package_qmkKeyboards/iris/keymaps/macmap && cp -R ./iris/macmap $npm_package_qmkKeyboards/iris/keymaps/macmap",
+    "cp:orthodox": "rm -rf $npm_package_qmkKeyboards/orthodox/keymaps/macmap && cp -R ./gherkin/macmap $npm_package_qmkKeyboards/orthodox/keymaps/macmap",
+    "cp:atreus:handwire": "rm -rf $npm_package_qmkKeyboards/atreus/keymaps/macmap && rm $npm_package_qmkKeyboards/atreus/config.h && cp -R ./atreus/keymaps/macmap $npm_package_qmkKeyboards/atreus/keymaps/macmap && cp ./atreus/config.h $npm_package_qmkKeyboards/atreus"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/filoxo/keyboard-layouts.git"
   },
-  "author": "",
+  "author": "Carlos Filoteo",
   "license": "UNLICENSED",
   "homepage": "https://github.com/filoxo/keyboard-layouts#readme"
 }
