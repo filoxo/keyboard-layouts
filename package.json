@@ -4,7 +4,7 @@
   "description": "My QMK keyboard layouts go here. Npm is just for scripts.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
@@ -12,8 +12,5 @@
   },
   "author": "",
   "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/filoxo/keyboard-layouts/issues"
-  },
   "homepage": "https://github.com/filoxo/keyboard-layouts#readme"
 }
