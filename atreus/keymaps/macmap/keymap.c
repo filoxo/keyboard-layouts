@@ -16,7 +16,7 @@ enum custom_keycodes {
 #define KC_RST RESET
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[_QWERTY] = KEYMAP( /* Qwerty */
+[_QWERTY] = KEYMAP(
    Q   ,   W   ,   E   ,   R   ,   T   ,                   Y   ,   U   ,   I   ,   O   ,   P   ,
    A   ,   S   ,   D   ,   F   ,   G   ,                   H   ,   J   ,   K   ,   L   ,KC_BSLS,
    Z   ,   X   ,   C   ,   V   ,   B   ,                   N   ,   M   ,KC_COMM, KC_DOT,KC_SLSH,
