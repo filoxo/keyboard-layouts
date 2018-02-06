@@ -1,0 +1,19 @@
+{
+  "name": "keyboard-layouts",
+  "version": "1.0.0",
+  "description": "My QMK keyboard layouts go here. Npm is just for scripts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filoxo/keyboard-layouts.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/filoxo/keyboard-layouts/issues"
+  },
+  "homepage": "https://github.com/filoxo/keyboard-layouts#readme"
+}
