@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Change this to how you wired your keyboard
 // COLS: right to left, ROWS: Top to bottom
-#define MATRIX_COL_PINS { B2, B6, B4, E6, D7, C6, D4, D0, D1, D2, D3 }
+#define MATRIX_COL_PINS { B2, B6, B4, E6, D7, B5, D4, D0, D1, D2, D3 }
 #define MATRIX_ROW_PINS { F4, F5, F6, F7 }
 
 /* COL2ROW or ROW2COL */
@@ -78,4 +78,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
 
+#endif
+
+#ifdef AUDIO_ENABLE
+    #define C6_AUDIO
+    #define STARTUP_SONG SONG(STARTUP_SOUND)
 #endif
