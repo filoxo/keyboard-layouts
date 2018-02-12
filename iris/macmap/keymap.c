@@ -70,11 +70,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_ADJUST] = KEYMAP(
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-     TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
+     RESET , DEBUG , TRNS  , TRNS  , TRNS  , TRNS  ,                    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
     RGB_TOG,RGB_MOD,RGB_HUI,RGB_SAI,RGB_VAI,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------.                 .-------|-------|-------|-------|-------|-------|
-     RESET , DEBUG ,RGB_HUD,RGB_SAD,RGB_VAD,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
+     TRNS  , TRNS  ,RGB_HUD,RGB_SAD,RGB_VAD,  TRNS ,                    TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
     BL_STEP, TRNS  , TRNS  , TRNS  , TRNS  , TRNS  , TRNS  ,    TRNS ,  TRNS ,  TRNS ,  TRNS ,  TRNS , TRNS ,  TRNS ,
   //|------|-------|-------|-------|-------|-------|------/   \------|-------|-------|-------|-------|-------|-------|
