@@ -59,21 +59,18 @@ OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 #   USBaspLoader     2048
 OPT_DEFS += -DBOOTLOADER_SIZE=4096
 
-
 # Build Options
 #   comment out to disable the options.
 #
 #BOOTMAGIC_ENABLE = yes	# Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE = no	# Mouse keys(+4700)
 EXTRAKEY_ENABLE = yes	# Audio control and System control(+450)
-CONSOLE_ENABLE = no	# Console for debug(+400)
-COMMAND_ENABLE = yes    # Commands for debug and configuration
+CONSOLE_ENABLE = no	    # Console for debug(+400)
+COMMAND_ENABLE = no     # Commands for debug and configuration
 # Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
-# SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
-NKRO_ENABLE = no		# USB Nkey Rollover - not yet supported in LUFA
-# BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
-# MIDI_ENABLE = YES 		# MIDI controls
-UNICODE_ENABLE = no 		# Unicode
-# BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
+# SLEEP_LED_ENABLE = yes # Breathing sleep LED during USB suspend
+NKRO_ENABLE = no		 # USB Nkey Rollover - not yet supported in LUFA
+UNICODE_ENABLE = no 	 # Unicode
 AUDIO_ENABLE = yes
+RGBLIGHT_ENABLE = yes
 USB = /dev/cu.usbmodem1411
