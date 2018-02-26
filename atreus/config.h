@@ -67,6 +67,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef RGBLIGHT_ENABLE
     #define RGB_DI_PIN B1
+    #define RGBLIGHT_ANIMATIONS
     #define RGBLED_NUM 4
 #endif
 
